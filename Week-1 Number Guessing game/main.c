@@ -11,6 +11,7 @@ int main() {
     while (1) {
         printf("Guess a number from 1-100\n");
         int status = scanf("%d", &guessedNum);
+        //For handling non-integet input
         if (status != 1) {
             printf("Invalid input. Please enter an integer.\n");
             while (getchar() != '\n'); 
