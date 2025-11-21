@@ -61,7 +61,7 @@ int matchDecision(char board[]) {
         int b = wins[i][1];
         int c = wins[i][2];
 
-        if (board[a] == board[b] && board[b] == board[c]) {
+        if ((board[a] == board[b]) && (board[b] == board[c])) {
             if (board[a] == 'X') return 1;
             if (board[a] == 'O') return 2;
         }
@@ -92,10 +92,12 @@ int main() {
 
         int winner = matchDecision(board);
         if (winner == 1 || winner == 2) {
-            printf("The winner is player %d", winner);
+            displayBoard(board);
+            printf("The winner is player %d\n", winner);
             exit(0);
         } else if (winner == -1) {
-            printf("The match is a draw");
+            displayBoard(board);
+            printf("The match is a draw\n");
             exit(0);
         }
 
