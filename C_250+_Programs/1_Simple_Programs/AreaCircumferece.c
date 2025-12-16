@@ -5,7 +5,6 @@ int main(){
   int radius;
 
   printf("Enter the radius of the circle: ");
-  scanf("%d", &radius);
 
   if (scanf("%d", &radius) != 1) {
     printf("Invalid input\n");
